@@ -20,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * <p>
- *  服务实现类
+ *  Service Implementation Class
  * </p>
  *
  * @author wangzhenyuan
