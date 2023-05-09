@@ -20,21 +20,21 @@ public class CodeGenerator {
         String tablePrefix = "x_";
         FastAutoGenerator.create(url, username, password)
                 .globalConfig(builder -> {
-                    builder.author(author) // 设置作者
-                            //.enableSwagger() // 开启 swagger 模式
-                            //.fileOverride() // 覆盖已生成文件
-                            .outputDir(outputDir); // 指定输出目录
+                    builder.author(author) 
+                            //.enableSwagger() 
+                            //.fileOverride() 
+                            .outputDir(outputDir); 
                 })
                 .packageConfig(builder -> {
-                    builder.parent(basePackage) // 设置父包名
-                            .moduleName(moduleName) // 设置父包模块名
-                            .pathInfo(Collections.singletonMap(OutputFile.xml, mapperLocation)); // 设置mapperXml生成路径
+                    builder.parent(basePackage) 
+                            .moduleName(moduleName) 
+                            .pathInfo(Collections.singletonMap(OutputFile.xml, mapperLocation)); 
                 })
                 .strategyConfig(builder -> {
-                    builder.addInclude(tableName) // 设置需要生成的表名
-                            .addTablePrefix(tablePrefix); // 设置过滤表前缀
+                    builder.addInclude(tableName) 
+                            .addTablePrefix(tablePrefix); 
                 })
-                .templateEngine(new FreemarkerTemplateEngine()) // 使用Freemarker引擎模板，默认的是Velocity引擎模板
+                .templateEngine(new FreemarkerTemplateEngine()) 
                 .execute();
     }
 
