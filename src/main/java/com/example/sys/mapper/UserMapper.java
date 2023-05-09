@@ -6,9 +6,6 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import java.util.List;
 
 /**
- * <p>
- *  Mapper 接口
- * </p>
  *
  * @author wangzhenyuan
  * @since 2023-04-20
